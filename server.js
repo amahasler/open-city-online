@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const WebSocket = require('ws');
 const PORT = Number(process.env.PORT || 8080);
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = __dirname;
 const players = new Map();
 const server = http.createServer((req, res) => {
   const url = req.url === '/' ? '/client.html' : req.url.split('?')[0];
